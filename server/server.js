@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 
 app.get("/students",async (req, res) => {
     const students = await Student.find();
-
+git 
     res.json(students);
 });
 
