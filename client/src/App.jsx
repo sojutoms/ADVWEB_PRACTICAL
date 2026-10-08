@@ -12,7 +12,7 @@ function App() {
 
   const getStudents = () => {
     axios
-    .get("http://localhost:5000/students")
+    .get("https://advwebpractical-server.vercel.app/students")
     .then((response) => {
       setStudents(response.data);
     })
@@ -31,7 +31,7 @@ function App() {
 
   const addStudent = () => {
     axios
-    .post("http://localhost:5000/students", {
+    .post("https://advwebpractical-server.vercel.app/students", {
       name:name,
       course:course,
       age:age
@@ -44,7 +44,7 @@ function App() {
 
   const updateStudent = () => {
     axios
-    .put(`http://localhost:5000/students/${editingId}`, {
+    .put(`https://advwebpractical-server.vercel.app/students/${editingId}`, {
       name:name,
       course:course,
       age:age
@@ -64,7 +64,7 @@ function App() {
 
   const deleteStudent = (id) => {
     axios
-    .delete(`http://localhost:5000/students/${id}`)
+    .delete(`https://advwebpractical-server.vercel.app/students/${id}`)
     .then(() => {
       getStudents();
     })
